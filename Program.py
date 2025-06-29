@@ -1,5 +1,12 @@
 MonRate = int(input("What is the pokemon's default catch rate modifier?"))
-BallRate = int(input("What is the ball's catch rate multiplier?"))
+Ball = input("What is the ball being used?")
+match Ball:
+    case "pokeball":
+        BallRate = 1
+    case "greatball":
+        BallRate = 1.5
+    case "ultraball":
+        BallRate = 2
 Health = int(input("What is the pokemon's health percentage?"))
 Health = Health / 100
 StatusRate = int(input("What is the catch rate multiplier from status effects?"))
